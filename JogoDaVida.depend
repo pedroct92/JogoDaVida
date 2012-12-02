@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1354480954 source:c:\users\pedro\documents\github\jogodavida\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validacao.h"
+	"arquivo.h"
+
+1354477500 source:c:\users\pedro\documents\github\jogodavida\validacao.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+
+1354475309 c:\users\pedro\documents\github\jogodavida\validacao.h
+
+1354477647 source:c:\users\pedro\documents\github\jogodavida\funcoes.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+
+1354475900 c:\users\pedro\documents\github\jogodavida\funcoes.h
+
+1354479787 c:\users\pedro\documents\github\jogodavida\arquivo.h
+
+1354480942 source:c:\users\pedro\documents\github\jogodavida\arquivo.c
+	<stdio.h>
+
