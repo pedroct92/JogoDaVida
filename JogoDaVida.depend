@@ -35,3 +35,40 @@
 
 1354751906 c:\users\pedro\documents\github\jogodavida\grade.h
 
+1354818105 source:c:\users\pedro.torres\documents\github\jogodavida\grade.c
+	<string.h>
+	"grade.h"
+	"funcoes.h"
+
+1354811876 c:\users\pedro.torres\documents\github\jogodavida\grade.h
+
+1354796209 source:c:\users\pedro.torres\documents\github\jogodavida\validacao.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+
+1354796383 c:\users\pedro.torres\documents\github\jogodavida\funcoes.h
+
+1354796623 source:c:\users\pedro.torres\documents\github\jogodavida\funcoes.c
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funcoes.h"
+
+1354816331 source:c:\users\pedro.torres\documents\github\jogodavida\main.c
+	<stdio.h>
+	<stdlib.h>
+	"validacao.h"
+	"arquivo.h"
+	"grade.h"
+
+1354796209 c:\users\pedro.torres\documents\github\jogodavida\validacao.h
+
+1354796209 c:\users\pedro.torres\documents\github\jogodavida\arquivo.h
+
+1354796209 source:c:\users\pedro.torres\documents\github\jogodavida\arquivo.c
+	<stdio.h>
+

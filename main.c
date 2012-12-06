@@ -6,7 +6,8 @@
 
 /* Constantes */
 #define QTD_GERACOES 5
-#define QTD_GRADE    50
+#define QTD_LINHA    10
+#define QTD_COLUNA   10
 
 /*  Parametros de prcessamento do jogo da vida:
     => f-nomeDoArquivo.txt
@@ -24,12 +25,12 @@ int main(int argc, char *argv[]){
     if (qtdGeracoes == 0)
         qtdGeracoes = QTD_GERACOES;
 
-    grade = initGrade(nomeArquivo, QTD_GRADE);
+    grade = initGrade(nomeArquivo, QTD_LINHA, QTD_COLUNA);
 
     for(; i <= qtdGeracoes; i++){
         printf("************************* Geracao [%d] *******************************\n",i);
-        printGeracao(grade, QTD_GRADE);
-        //proximaGeracao(geracao);
+        printGeracao(grade, QTD_LINHA, QTD_COLUNA);
+        nextGeracao(grade, QTD_LINHA, QTD_COLUNA);
     }
     return 0;
 }
