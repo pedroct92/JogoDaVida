@@ -15,5 +15,20 @@ char *replace(char *st, char *orig, char *repl) {
   return buffer;
   }
 
+int ** matriz(int qtd){
+    int **mat;
+    int i = 0;
+    mat = (int **) malloc(qtd * sizeof(int *));
 
+    if(mat == NULL){
+        printf ("** Erro: Memoria Insuficiente **");
+        return (NULL);
+    }
 
+    for(; i< qtd; i++){
+        mat[i] = malloc(qtd * sizeof(int));
+        if(mat[i] == NULL)
+            printf("** Erro: Memoria Insuficiente **");
+    }
+    return mat;
+}

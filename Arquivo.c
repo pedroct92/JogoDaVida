@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int * readFile(const char* fileName[]){
+int * geracaoArquivo(const char* fileName[]){
     FILE *file = fopen(fileName, "r");
 
     if(file == 0){
@@ -15,15 +15,13 @@ int * readFile(const char* fileName[]){
                 coluna = (int) value;
 
             }else{
-
                 printf("Linha: %d \n coluna: %d \n", linha, coluna);
-
             }
             count++;
         }
-
     }
     fclose(file);
+    return NULL;
 }
 
 

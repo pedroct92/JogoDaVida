@@ -1,44 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "validacao.h"
 #include "arquivo.h"
+#include "grade.h"
 
-/*
-    Parametros de prcessamento do jogo da vida:
+/* Constantes */
+#define QTD_GERACOES 5
+#define QTD_GRADE    50
+
+/*  Parametros de prcessamento do jogo da vida:
     => f-nomeDoArquivo.txt
     => qtd-númeroDeGeraçõesDesejadas
-    ex: JogoDaVida.exe f-bacterias.txt qtd-10
-*/
-
-/*
-    Constantes
-*/
-
-/*
-    varivaveis globais.
-
-*/
+    ex: JogoDaVida.exe f-bacterias.txt qtd-10 */
 
 int main(int argc, char *argv[]){
-    /*
-    int qtdGeracoes;
-    char * nome;
+    int **grade;
+    int qtdGeracoes = 0, i = 1;
+    char * nomeArquivo;
 
-    nome = nameFile(argc, argv);
+    nomeArquivo = nameFile(argc, argv);
     qtdGeracoes = qtdGeracao(argc, argv);
 
-    initGrade(nome);
-
-    if (qtdGera == 0)
+    if (qtdGeracoes == 0)
         qtdGeracoes = QTD_GERACOES;
 
+    grade = initGrade(nomeArquivo, QTD_GRADE);
 
-    for(i = 0; i<qdtGeracoes; i++){
-        printGeracao(geracao);
-        proximaGeracao(geracao);
+    for(; i <= qtdGeracoes; i++){
+        printf("************************* Geracao [%d] *******************************\n",i);
+        printGeracao(grade, QTD_GRADE);
+        //proximaGeracao(geracao);
     }
-
-    system("pause");*/
     return 0;
 }

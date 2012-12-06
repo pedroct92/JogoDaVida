@@ -1,1 +1,1 @@
-void readFile(char * fileName[]);
+void geracaoArquivo(char * fileName[]);

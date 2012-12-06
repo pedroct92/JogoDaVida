@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Arquivo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Arquivo.h" />
+		<Unit filename="Grade.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Grade.h" />
 		<Unit filename="Validacao.c">
 			<Option compilerVar="CC" />
 		</Unit>

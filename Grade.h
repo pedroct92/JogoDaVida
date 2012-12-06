@@ -1,5 +1,4 @@
-/*
-  int initGrade(nome);
-  void printGrade(int * grade, int qtdGrade);
-  int seachVizinhos();
-*/
+int * initGrade(char * const nomeArquivo[], int qtd);
+void printGeracao(int **grade, int qtd);
+//int seachVizinhos();
+
