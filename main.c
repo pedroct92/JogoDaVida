@@ -6,8 +6,8 @@
 
 /* Constantes */
 #define QTD_GERACOES 5
-#define QTD_LINHA    10
-#define QTD_COLUNA   10
+#define QTD_LINHA    9
+#define QTD_COLUNA   9
 
 /*  Parametros de prcessamento do jogo da vida:
     => f-nomeDoArquivo.txt

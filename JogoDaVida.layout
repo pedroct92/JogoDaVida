@@ -2,13 +2,13 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="Arquivo.c" open="0" top="0" tabpos="0">
-		<Cursor position="42" topLine="0" />
+		<Cursor position="208" topLine="0" />
 	</File>
 	<File name="Arquivo.h" open="0" top="0" tabpos="0">
 		<Cursor position="19" topLine="0" />
 	</File>
 	<File name="Grade.c" open="0" top="0" tabpos="2">
-		<Cursor position="892" topLine="0" />
+		<Cursor position="517" topLine="0" />
 	</File>
 	<File name="Grade.h" open="0" top="0" tabpos="0">
 		<Cursor position="223" topLine="0" />
@@ -26,6 +26,6 @@
 		<Cursor position="87" topLine="0" />
 	</File>
 	<File name="main.c" open="0" top="0" tabpos="1">
-		<Cursor position="174" topLine="0" />
+		<Cursor position="317" topLine="1" />
 	</File>
 </CodeBlocks_layout_file>
