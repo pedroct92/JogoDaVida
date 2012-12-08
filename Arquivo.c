@@ -1,14 +1,18 @@
 #include <stdio.h>
 
 int * geracaoArquivo(const char* fileName[]){
-    int value, count = 0, linha = 0, coluna = 0;
+    int value, count = 0;
     int L = 0, C = 0;
-    FILE *file = fopen(fileName, "r");
+
+    int linha = 0;
+    int coluna = 0;
+
+    FILE *file = fopen(*fileName, "r");
 
     int ** grade = NULL;
 
     if(file == 0){
-        printf("O arquivo informado [%s] nao pode ser lido!\n");
+        printf("O arquivo informado [%s] nao pode ser lido!\n",*fileName);
     }else{
         while((value = fgetc(file)) != EOF){
             if(count == 0)

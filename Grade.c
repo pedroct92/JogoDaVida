@@ -2,14 +2,14 @@
 #include "grade.h"
 #include "funcoes.h"
 
-int * initGrade(char * const nomeArquivo[], int linha, int coluna){
-    if(strcmp(nomeArquivo, "") == 0)
+int * initGrade(char * const nomeArquivo[], int *linha, int *coluna){
+    if(strcmp(*nomeArquivo, "") == 0)
         return geracaoRandomica(linha, coluna);
     else
         return geracaoArquivo(nomeArquivo);
 }
 
-int geracaoRandomica(int linha, int coluna){
+int geracaoRandomica(int *linha, int *coluna){
     int ** grade;
     int i = 0, x = 0;
 
@@ -24,29 +24,29 @@ int geracaoRandomica(int linha, int coluna){
     return grade;
 }
 
-void printGeracao(int **grade, int linha, int coluna){
+void printGeracao(int **grade, int *linha, int *coluna){
     int x = 0, y = 0;
 
-    for(; x < linha; x++){
-        for(; y < coluna; y++){
+    for(; x < *linha; x++){
+        for(; y < *coluna; y++){
             if(grade[x][y] == 1)
                 printf("%c",254);//254
             else
                 printf("%c",207);
 
-            if(y == coluna -1)
+            if(y == *coluna -1)
                printf("\n");
         }
         y = 0;
     }
 }
 
-int nextGeracao(int **grade, int linha, int coluna){
+int nextGeracao(int **grade, int *linha, int *coluna){
     int i = 1, j = 1;
     int qtdVizinhos = 0;
 
-    for(; i < linha-1; i++){
-        for(; j < coluna-1; j++){
+    for(; i < *linha-1; i++){
+        for(; j < *coluna-1; j++){
 
             if(grade[i-1][j-1] == 1)
                 qtdVizinhos++;

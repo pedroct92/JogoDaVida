@@ -5,9 +5,8 @@
 #include "grade.h"
 
 /* Constantes */
-#define QTD_GERACOES 5
-#define QTD_LINHA    9
-#define QTD_COLUNA   9
+#define QTD_GERACOES 1
+#define QTD_PADRAO   9
 
 /*  Parametros de prcessamento do jogo da vida:
     => f-nomeDoArquivo.txt
@@ -17,6 +16,7 @@
 int main(int argc, char *argv[]){
     int **grade;
     int qtdGeracoes = 0, i = 1;
+    int *L = QTD_PADRAO, *C = QTD_PADRAO;
     char * nomeArquivo;
 
     nomeArquivo = nameFile(argc, argv);
@@ -25,12 +25,12 @@ int main(int argc, char *argv[]){
     if (qtdGeracoes == 0)
         qtdGeracoes = QTD_GERACOES;
 
-    grade = initGrade(nomeArquivo, QTD_LINHA, QTD_COLUNA);
+    grade = initGrade(&nomeArquivo, L, C);
 
     for(; i <= qtdGeracoes; i++){
         printf("************************* Geracao [%d] *******************************\n",i);
-        printGeracao(grade, QTD_LINHA, QTD_COLUNA);
-        nextGeracao(grade, QTD_LINHA, QTD_COLUNA);
+        printGeracao(grade, &L, &C);
+        nextGeracao(grade, &L, &C);
     }
     return 0;
 }

@@ -1,39 +1,40 @@
 # depslib dependency file v1.0
-1354753694 source:c:\users\pedro\documents\github\jogodavida\main.c
+1354929338 source:c:\users\pedro\documents\github\jogodavida\main.c
 	<stdio.h>
 	<stdlib.h>
 	"validacao.h"
 	"arquivo.h"
 	"grade.h"
 
-1354477500 source:c:\users\pedro\documents\github\jogodavida\validacao.c
+1354921899 source:c:\users\pedro\documents\github\jogodavida\validacao.c
 	<stdio.h>
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"funcoes.h"
 
-1354475309 c:\users\pedro\documents\github\jogodavida\validacao.h
+1354915596 c:\users\pedro\documents\github\jogodavida\validacao.h
 
-1354753426 source:c:\users\pedro\documents\github\jogodavida\funcoes.c
+1354915596 source:c:\users\pedro\documents\github\jogodavida\funcoes.c
 	<stdio.h>
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 	"funcoes.h"
 
-1354482729 c:\users\pedro\documents\github\jogodavida\funcoes.h
+1354915596 c:\users\pedro\documents\github\jogodavida\funcoes.h
 
-1354743689 c:\users\pedro\documents\github\jogodavida\arquivo.h
+1354928889 c:\users\pedro\documents\github\jogodavida\arquivo.h
 
-1354750725 source:c:\users\pedro\documents\github\jogodavida\arquivo.c
+1354929755 source:c:\users\pedro\documents\github\jogodavida\arquivo.c
 	<stdio.h>
 
-1354753402 source:c:\users\pedro\documents\github\jogodavida\grade.c
+1354928906 source:c:\users\pedro\documents\github\jogodavida\grade.c
 	<string.h>
 	"grade.h"
+	"funcoes.h"
 
-1354751906 c:\users\pedro\documents\github\jogodavida\grade.h
+1354917099 c:\users\pedro\documents\github\jogodavida\grade.h
 
 1354906550 source:c:\users\pedro.torres\documents\github\jogodavida\grade.c
 	<string.h>
