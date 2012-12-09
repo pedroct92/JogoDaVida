@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "funcoes.h"
 
-int * geracaoArquivo(const char* fileName[]){
+int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
     int value, count = 0;
     int L = 0, C = 0;
 
@@ -37,6 +38,8 @@ int * geracaoArquivo(const char* fileName[]){
         }
         fclose(file);
     }
+    *_linha = linha + 1;
+    *_coluna = coluna;
     return grade;
 }
 

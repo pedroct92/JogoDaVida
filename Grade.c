@@ -1,22 +1,24 @@
+#include <stdio.h>
 #include <string.h>
 #include "grade.h"
 #include "funcoes.h"
+#include "arquivo.h"
 
-int * initGrade(char * const nomeArquivo[], int *linha, int *coluna){
+int ** initGrade(char * const nomeArquivo[], int *linha, int *coluna){
     if(strcmp(*nomeArquivo, "") == 0)
         return geracaoRandomica(linha, coluna);
     else
-        return geracaoArquivo(nomeArquivo);
+        return geracaoArquivo(nomeArquivo, linha, coluna);
 }
 
-int geracaoRandomica(int *linha, int *coluna){
+int ** geracaoRandomica(int *linha, int *coluna){
     int ** grade;
     int i = 0, x = 0;
 
-    grade = matriz(linha,coluna);
+    grade = matriz(*linha,*coluna);
 
-    for(; i< linha; i++){
-        for(; x< coluna; x++)
+    for(; i< *linha; i++){
+        for(; x< *coluna; x++)
             grade[i][x] = (rand() % 2 == 0)? 1 : 0;
 
         x = 0;
@@ -41,7 +43,7 @@ void printGeracao(int **grade, int *linha, int *coluna){
     }
 }
 
-int nextGeracao(int **grade, int *linha, int *coluna){
+void nextGeracao(int **grade, int *linha, int *coluna){
     int i = 1, j = 1;
     int qtdVizinhos = 0;
 
@@ -85,6 +87,4 @@ int nextGeracao(int **grade, int *linha, int *coluna){
         qtdVizinhos = 0;
         j = 0;
     }
-
-    return grade;
 }
