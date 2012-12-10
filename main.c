@@ -9,9 +9,9 @@
 #define QTD_PADRAO   9
 
 /*  Parametros de prcessamento do jogo da vida:
-    => f-nomeDoArquivo.txt
-    => qtd-númeroDeGeraçõesDesejadas
-    ex: JogoDaVida.exe f-bacterias.txt qtd-10 */
+    => nomeDoArquivo.txt
+    => númeroDeGeraçõesDesejadas
+    ex: JogoDaVida.exe bacterias.txt 10 */
 
 int main(int argc, char *argv[]){
     int **grade;
