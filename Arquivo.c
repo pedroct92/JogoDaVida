@@ -15,31 +15,54 @@ int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
     if(file == 0){
         printf("O arquivo informado [%s] nao pode ser lido!\n",*fileName);
     }else{
-        while((value = fgetc(file)) != EOF){
-            if(count == 0)
-                L = value - 48;
-            if(count == 1)
-                C = value - 48;
+        int espaco = 0, quebra = 0, pass = 0;
+        char lin[10], col[40];
+        int cont1 = 0, cont2 = 0, print =0;
 
-            if(L > 0 && C > 0 && grade == NULL){
-                grade = matriz(L, C);
+        while((value = fgetc(file)) != EOF){
+            (value == ' ' )? espaco++: espaco;
+            (value == '\n' )? quebra++: quebra;
+
+            if(espaco == 0){
+                lin[cont1] = value;
+                pass = 1;
+                cont1++;
             }
+
+            if(quebra == 0 && pass != 1 && value != ' '){
+                col[cont2] = value;
+                cont2++;
+            }
+
+            pass = 0;
+
+            if (quebra == 1 && print == 0){
+                L = atoi(lin);
+                C = atoi(col);
+                print = 1;
+            }
+
+            if(L > 0 && C > 0 && grade == NULL)
+                grade = matriz(L, C);
 
             if((grade != NULL) && (linha <= L) && (coluna <= C)){
-                if(value == 10 && count > 2){
-                    linha++;
-                    coluna = 0;
-                }else if(count > 2){
-                    grade[linha][coluna] = value - 48;
-                    coluna++;
+                if(count >0){
+                    if(value == '\n'){
+                        linha++;
+                        coluna = 0;
+                    }else{
+                        grade[linha][coluna] = value - 48;
+                        coluna++;
+                    }
                 }
+                count++;
             }
-            count++;
         }
         fclose(file);
+        free(file);
     }
-    *_linha = linha + 1;
-    *_coluna = coluna;
+    *_linha = L;
+    *_coluna = C;
     return grade;
 }
 

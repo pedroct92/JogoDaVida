@@ -96,3 +96,7 @@ int vizinhos(int ** grade, int i, int j){
 
     return qtdVizinhos;
 }
+
+void desalocaGrade(int **grade){
+    free(grade);
+}
