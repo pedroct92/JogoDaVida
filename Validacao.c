@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdio.h>
+#include <stdlib.h>
 #include <stdlib.h>
 #include "funcoes.h"
 
@@ -28,7 +28,7 @@ int qtdGeracao(int argc, char *argv[]){
     if(argc > 2)
         return atoi(argv[2]); //atoi(findParametro(argc, argv, "qtd-"));
     else
-        return NULL;
+        return 0;
 }
 
 

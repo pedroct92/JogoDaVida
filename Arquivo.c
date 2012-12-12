@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "funcoes.h"
 
 int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
@@ -16,30 +17,30 @@ int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
         printf("O arquivo informado [%s] nao pode ser lido!\n",*fileName);
     }else{
         int espaco = 0, quebra = 0, pass = 0;
-        char lin[10], col[40];
-        int cont1 = 0, cont2 = 0, print =0;
+        int contLinha = 0, contColuna = 0, linhaXcoluna =0;
+        char lin[10], col[10];
 
         while((value = fgetc(file)) != EOF){
             (value == ' ' )? espaco++: espaco;
             (value == '\n' )? quebra++: quebra;
 
             if(espaco == 0){
-                lin[cont1] = value;
+                lin[contLinha] = value;
                 pass = 1;
-                cont1++;
+                contLinha++;
             }
 
             if(quebra == 0 && pass != 1 && value != ' '){
-                col[cont2] = value;
-                cont2++;
+                col[contColuna] = value;
+                contColuna++;
             }
 
             pass = 0;
 
-            if (quebra == 1 && print == 0){
+            if (quebra == 1 && linhaXcoluna == 0){
                 L = atoi(lin);
                 C = atoi(col);
-                print = 1;
+                linhaXcoluna = 1;
             }
 
             if(L > 0 && C > 0 && grade == NULL)
