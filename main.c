@@ -11,7 +11,11 @@
 /*  Parametros de prcessamento do jogo da vida:
     => nomeDoArquivo.txt
     => númeroDeGeraçõesDesejadas
-    ex: JogoDaVida.exe bacterias.txt 10 */
+    ex: JogoDaVida.exe bacterias.txt 10
+
+    Autor: Pedro Coelho
+    Email: pedroct92@gmail.com
+*/
 
 int main(int argc, char *argv[]){
     int **grade;
