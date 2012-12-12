@@ -31,18 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Arquivo.c">
+		<Unit filename="arquivo.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Arquivo.h" />
-		<Unit filename="Grade.c">
+		<Unit filename="arquivo.h" />
+		<Unit filename="grade.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Grade.h" />
-		<Unit filename="Validacao.c">
+		<Unit filename="grade.h" />
+		<Unit filename="validacao.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Validacao.h" />
+		<Unit filename="validacao.h" />
 		<Unit filename="funcoes.c">
 			<Option compilerVar="CC" />
 		</Unit>
