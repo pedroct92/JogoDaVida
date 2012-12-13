@@ -6,7 +6,7 @@
 
 /* Constantes */
 #define QTD_GERACOES 50
-#define QTD_PADRAO   50
+#define QTD_PADRAO   20
 
 /*  Parametros de prcessamento do jogo da vida:
     => nomeDoArquivo.txt
@@ -25,7 +25,7 @@
 int main(int argc, char *argv[]){
     int **grade;
     int qtdGeracoes = 0, i = 1;
-    int *L = QTD_PADRAO, *C = QTD_PADRAO;
+    int L = QTD_PADRAO, C = QTD_PADRAO;
     char * nomeArquivo;
 
     nomeArquivo = nameFile(argc, argv);
