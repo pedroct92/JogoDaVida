@@ -14,41 +14,40 @@ int ** initGrade(char * const nomeArquivo[], int *linha, int *coluna){
 
 int ** geracaoRandomica(int *linha, int *coluna){
     int ** grade;
-    int i = 0, x = 0;
+    int i, x;
 
-    grade = matriz(*linha,*coluna);
+    grade = matriz(*linha + 2,*coluna + 2);
 
-    for(; i< *linha; i++){
-        for(; x< *coluna; x++)
-            grade[i][x] = (rand() % 2 == 0)? 1 : 0;
+    for(i = 1; i< *linha + 1; i++){
+        for(x = 1; x< *coluna + 1; x++){
+            grade[i][x] = (rand() % 2 == 0)? 0 : 1;
 
-        x = 0;
+        }
     }
     return grade;
 }
 
 void printGeracao(int **grade, int *linha, int *coluna){
-    int x = 0, y = 0;
+    int x, y;
 
-    for(; x < *linha; x++){
-        for(; y < *coluna; y++){
+    for(x = 1; x < *linha+1; x++){
+        for(y = 1; y < *coluna+1; y++){
             if(grade[x][y] == 1)
-                printf("%c",254);//254
+                printf("%c",254);
             else
                 printf("%c",207);
 
-            if(y == *coluna -1)
+            if(y == *coluna)
                printf("\n");
         }
-        y = 0;
     }
 }
 
 void nextGeracao(int **grade, int *linha, int *coluna){
     int i = 1, j = 1, qtdVizinhos = 0;
 
-    for(; i < *linha-1; i++){
-        for(; j < *coluna-1; j++){
+    for(; i < *linha+1; i++){
+        for(; j < *coluna+1; j++){
 
             qtdVizinhos = vizinhos(grade, i, j);
 
@@ -67,9 +66,7 @@ void nextGeracao(int **grade, int *linha, int *coluna){
 }
 
 int vizinhos(int ** grade, int i, int j){
-    int x, y, qtdVizinhos = 0 ;
-    x = (i - 1) == -1 ? 0 : i -1;
-    y = (j - 1) == -1 ? 0 : j -1;
+    int x = i -1, y = j -1, qtdVizinhos = 0 ;
 
     if(grade[x][y] == 1)
         qtdVizinhos++;

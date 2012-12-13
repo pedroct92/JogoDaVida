@@ -6,8 +6,8 @@ int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
     int value, count = 0;
     int L = 0, C = 0;
 
-    int linha = 0;
-    int coluna = 0;
+    int linha = 1;
+    int coluna = 1;
 
     FILE *file = fopen(*fileName, "r");
 
@@ -44,13 +44,13 @@ int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
             }
 
             if(L > 0 && C > 0 && grade == NULL)
-                grade = matriz(L, C);
+                grade = matriz(L + 2, C + 2);
 
-            if((grade != NULL) && (linha <= L) && (coluna <= C)){
+            if((grade != NULL) && (linha <= L+1) && (coluna <= C+1)){
                 if(count >0){
                     if(value == '\n' && value !=' '){
                         linha++;
-                        coluna = 0;
+                        coluna = 1;
                     }else if(value !=' '){
                         grade[linha][coluna] = value - 48;
                         coluna++;
