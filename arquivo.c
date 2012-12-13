@@ -60,7 +60,6 @@ int ** geracaoArquivo(char* fileName[], int *_linha, int *_coluna){
             }
         }
         fclose(file);
-        free(file);
     }
     *_linha = L;
     *_coluna = C;

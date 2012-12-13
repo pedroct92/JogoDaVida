@@ -12,7 +12,7 @@ int ** matriz(int linha, int coluna){
     }
 
     for(; i< linha; i++){
-        mat[i] = malloc(coluna * sizeof(int));
+        mat[i] = (int*) malloc(coluna * sizeof(int));
         if(mat[i] == NULL)
             printf("** Erro: Memoria Insuficiente **");
     }
