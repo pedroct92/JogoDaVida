@@ -48,10 +48,10 @@ int ** geracaoArquivo(const char* fileName[], int *_linha, int *_coluna){
 
             if((grade != NULL) && (linha <= L) && (coluna <= C)){
                 if(count >0){
-                    if(value == '\n'){
+                    if(value == '\n' && value !=' '){
                         linha++;
                         coluna = 0;
-                    }else{
+                    }else if(value !=' '){
                         grade[linha][coluna] = value - 48;
                         coluna++;
                     }
