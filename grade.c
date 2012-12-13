@@ -33,9 +33,9 @@ void printGeracao(int **grade, int *linha, int *coluna){
     for(x = 1; x < *linha+1; x++){
         for(y = 1; y < *coluna+1; y++){
             if(grade[x][y] == 1)
-                printf("%c",254);
+                printf("%c",35);
             else
-                printf("%c",207);
+                printf("%c",45);
 
             if(y == *coluna)
                printf("\n");

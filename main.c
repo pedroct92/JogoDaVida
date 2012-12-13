@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
     grade = initGrade(&nomeArquivo, &L, &C);
 
     for(; i <= qtdGeracoes; i++){
-        printf("----------------------- Geracao [%d] ------------------------------\n",i);
+        printf("\n**************************** Geracao [%d] ******************************\n\n",i);
         printGeracao(grade, &L, &C);
         nextGeracao(grade, &L, &C);
     }
