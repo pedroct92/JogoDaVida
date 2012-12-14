@@ -12,7 +12,7 @@ arquivo.o: arquivo.c
 funcoes.o: funcoes.c
 	gcc -c funcoes.c
 
-validcao.o: validacao.c
+validacao.o: validacao.c
 	gcc -c validacao.c
 
 grade.o: grade.c
