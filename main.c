@@ -9,7 +9,7 @@
 #define QTD_PADRAO   20
 
 /*  Autor: Pedro Coelho Torres
-    Email: peroct92@gmail.com, pedrotorres@dcc.ufba.br
+    Email: pedroct92@gmail.com, pedrotorres@dcc.ufba.br
     Parametros de prcessamento do jogo da vida:
     => nomeDoArquivo.txt
     => numeroDeGeracoesDesejadas
