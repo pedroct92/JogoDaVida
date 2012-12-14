@@ -8,9 +8,11 @@
 #define QTD_GERACOES 50
 #define QTD_PADRAO   20
 
-/*  Parametros de prcessamento do jogo da vida:
+/*  Autor: Pedro Coelho Torres
+    Email: peroct92@gmail.com, pedrotorres@dcc.ufba.br
+    Parametros de prcessamento do jogo da vida:
     => nomeDoArquivo.txt
-    => númeroDeGeraçõesDesejadas
+    => numeroDeGeracoesDesejadas
     ex: JogoDaVida.exe bacterias.txt 10
 
     Modelo arquivo:
