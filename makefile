@@ -19,4 +19,4 @@ grade.o: grade.c
 	gcc -c grade.c
 
 clean: 
-	rm -rf *o hello	
+	rm -rf *o jogodavida	
