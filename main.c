@@ -5,8 +5,8 @@
 #include "grade.h"
 
 /* Constantes */
-#define QTD_GERACOES 50
-#define QTD_PADRAO   20
+#define QTD_GERACOES 5
+#define QTD_PADRAO   10
 
 /*  Autor: Pedro Coelho Torres
     Email: pedroct92@gmail.com, pedrotorres@dcc.ufba.br
@@ -25,7 +25,7 @@
  */
 
 int main(int argc, char *argv[]){
-    int **grade;
+    int **grade = NULL;
     int qtdGeracoes = 0, i = 1;
     int L = QTD_PADRAO, C = QTD_PADRAO;
     char * nomeArquivo;

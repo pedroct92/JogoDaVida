@@ -13,7 +13,7 @@ int ** initGrade(char * const nomeArquivo[], int *linha, int *coluna){
 }
 
 int ** geracaoRandomica(int *linha, int *coluna){
-    int ** grade;
+    int ** grade = NULL;
     int i, x;
 
     grade = matriz(*linha + 2,*coluna + 2);
@@ -44,25 +44,27 @@ void printGeracao(int **grade, int *linha, int *coluna){
 }
 
 void nextGeracao(int **grade, int *linha, int *coluna){
-    int i = 1, j = 1, qtdVizinhos = 0;
+    int i, j;
+    int ** matVizinho = matVizinho = matriz(*linha + 2,*coluna + 2);
 
-    for(; i < *linha+1; i++){
-        for(; j < *coluna+1; j++){
-
-            qtdVizinhos = vizinhos(grade, i, j);
-
-            if(grade[i][j] == 1 && qtdVizinhos < 2)
-               grade[i][j] = 0;
-
-            if(grade[i][j] == 1 && qtdVizinhos > 3)
-               grade[i][j] = 0;
-
-            if(grade[i][j] == 0 && qtdVizinhos == 3)
-               grade[i][j] = 1;
-
-        }
-        qtdVizinhos = j = 0;
+    for(i = 1; i < *linha+1; i++){
+        for(j = 1; j < *coluna+1; j++)
+            matVizinho[i][j] = vizinhos(grade, i, j);
     }
+
+    for(i = 1; i < *linha+1; i++){
+        for(j = 1; j < *coluna+1; j++){
+            if(grade[i][j] == 1 && matVizinho[i][j] < 2)
+               grade[i][j] = 0;
+
+            if(grade[i][j] == 1 && matVizinho[i][j] > 3)
+               grade[i][j] = 0;
+
+            if(grade[i][j] == 0 && matVizinho[i][j] == 3)
+               grade[i][j] = 1;
+        }
+    }
+    desalocaGrade(matVizinho);
 }
 
 int vizinhos(int ** grade, int i, int j){
